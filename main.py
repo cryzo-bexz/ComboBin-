@@ -16,7 +16,6 @@ HEADERS = {
 def mirror(path):
     target = f"{BASE_URL}/{path}" if path else f"{BASE_URL}/"
 
-    # Append query params if present
     if request.query_string:
         target += "?" + request.query_string.decode("utf-8")
 
@@ -29,7 +28,3 @@ def mirror(path):
         )
     except Exception as e:
         return Response(f"<h1>Proxy error</h1><pre>{e}</pre>", status=500)
-
-def handler(request, *args, **kwargs):
-    with app.request_context(request.environ):
-        return app.full_dispatch_request()
