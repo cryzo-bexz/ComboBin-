@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-BASE_URL = "http://astro.wisp.uno:13462"
+BASE_URL = "http://helya.wisp.uno:13561/"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                   "AppleWebKit/537.36 (KHTML, like Gecko) "
